@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Accordion</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .color1 {
+            background: rgb(219, 219, 219);
+        }
+
+        .track {
+            height: 500px;
+
+
+        }
+
+        .track a {
+            cursor: pointer;
+            background: #005d97;
+            border: 1px solid #FCE4A8;
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .track a:hover,
+        .track a.active {
+            color: #fff;
+            background: #3E6B71;
+            transition: .3s;
+
+        }
+
+        /* .track a.active{
+            color:#fff;
+            background: #3E6B71;
+            transition: .3s;
+           
+        } */
+
+        .description {
+            width: 0%;
+            overflow: hidden;
+            transition: .8s;
+            color: rgb(2, 55, 104);
+            font-weight: 700;
+            font-size: 19px;
+
+        }
+
+        .description.active {
+            flex: 1;
+            width: 100%;
+        }
+
+        .bg1 {
+            background: url(images/cake1.jpg);
+            background-size: cover;
+        }
+
+        .bg2 {
+            background: url(images/cake2.jpg);
+            background-size: cover;
+        }
+
+        .bg3 {
+            background: url(images/cake3.jpg);
+            background-size: cover;
+        }
+
+        .bg4 {
+            background: url(images/cake4.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+
+<body class="color1">
+    <div class="container d-flex track my-5 p-0">
+        <a>CAKE1</a>
+        <div class="description active bg1">
+            <h4>Ingredients</h4>
+            <div>230ml vegetable oil, plus extra for the tin
+                100g natural yogurt
+                4 large eggs
+                1½ tsp vanilla extract
+                ½ orange, zested
+                265g self-raising flour
+                335g light muscovado sugar
+                2½ tsp ground cinnamon
+                ¼ fresh nutmeg, finely grated
+                265g carrots (about 3), grated
+                100g sultanas or raisins
+                100g walnuts or pecans, roughly chopped (optional)</div>
+           
+            
+        </div>
+
+        <a>CAKE2</a>
+        <div class="description bg2">
+            <h4>Ingredients</h4>
+            <div>200g caster sugar
+                200g softened butter
+                4 eggs, beaten
+                200g self-raising flour
+                1 tsp baking powder
+                2 tbsp milk
+                For the filling
+                100g butter, softened
+                140g icing sugar, sifted
+                drop vanilla extract (optional)
+                half a 340g jar good-quality strawberry jam (we used Tiptree Little Scarlet)
+                icing sugar, to decorate</div>
+        </div>
+
+        <a>CAKE3</a>
+        <div class="description bg3">
+            <h4>Ingredients</h4>
+            <div>200g butter, well softened, plus extra for greasing
+                200g golden caster sugar
+                100g ground almond
+                100g self-raising flour
+                1 tsp baking powder
+                ½ tsp almond extract or essence
+                4 large eggs</div>
+        </div>
+
+        <a>CAKE4</a>
+        <div class="description bg4">
+            <h4>Ingredients</h4>
+            <div>250g pack softened butter, plus extra for the tins
+                100ml strong black coffee (made with 2 tbsp coffee granules), cooled
+                280g self-raising flour
+                250g golden caster sugar
+                ½ tsp baking powder
+                4 eggs
+                1 tsp vanilla extract
+                85g walnut, 2 tbsp roughly chopped, the rest finely chopped</div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $(".track a").click(function () {
+            $(".description, a").removeClass("active")
+            $(this).addClass("active").next(".description").addClass("active")
+        })
+    </script>
+</body>
+
+</html>
